@@ -1,0 +1,31 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-rows: auto;
+  column-gap: 25px;
+  row-gap: 50px;
+  grid-auto-flow: row;
+  align-items: center;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-top: 1rem;
+}
+
+.restaurantCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #bfbfbf;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  text-align: center;
+  height: 20rem;
+}
+
+.footer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

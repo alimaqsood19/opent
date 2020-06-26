@@ -1,0 +1,45 @@
+.searchSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-rows: auto;
+  grid-template-areas:
+    '. header header .'
+    'searchBar searchBar searchBar searchBar';
+}
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchBtn {
+  background-color: #ff7b73;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem;
+  width: 8rem;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.inputBox {
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  height: 2rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+
+.stack > label {
+  margin-bottom: 0.5rem;
+}
