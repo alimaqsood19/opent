@@ -4,7 +4,7 @@ import { fetchRestaurantList } from './actions';
 import './style.css';
 
 class SearchBar extends React.Component {
-  state = { city: '', price: '', postal: '' };
+  state = { city: '', price: '', zip: '' };
 
   onInputChange = (event) => {
     const target = event.target;
@@ -21,7 +21,7 @@ class SearchBar extends React.Component {
     this.props.restaurantList(
       this.state.city,
       this.state.price,
-      this.state.postal
+      this.state.zip
     );
   };
 
@@ -33,7 +33,7 @@ class SearchBar extends React.Component {
 
           <div className="searchContainer">
             <div className="stack">
-              <label>City</label>
+              <label for="city">City</label>
               <input
                 className="inputBox"
                 name="city"
@@ -43,7 +43,7 @@ class SearchBar extends React.Component {
               />
             </div>
             <div className="stack">
-              <label>Price</label>
+              <label for="price">Price</label>
               <input
                 className="inputBox"
                 name="price"
@@ -53,12 +53,12 @@ class SearchBar extends React.Component {
               />
             </div>
             <div className="stack">
-              <label>Postal Code</label>
+              <label for="zip">Postal Code</label>
               <input
                 className="inputBox"
                 name="postal"
                 type="text"
-                value={this.state.postal}
+                value={this.state.zip}
                 onChange={this.onInputChange}
               />
             </div>
@@ -77,8 +77,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  restaurantList: (city, refine, price, postal) =>
-    dispatch(fetchRestaurantList(city, refine, price, postal)),
+  restaurantList: (city, refine, price, zip) =>
+    dispatch(fetchRestaurantList(city, refine, price, zip)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);

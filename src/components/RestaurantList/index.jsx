@@ -9,6 +9,7 @@ const RestaurantCard = ({ restaurant }) => {
       <h1>{restaurant.name}</h1>
       <p>{restaurant.address}</p>
       <p>{restaurant.area}</p>
+      <p>{restaurant.price}</p>
     </div>
   );
 };
