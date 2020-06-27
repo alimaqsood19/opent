@@ -1,21 +1,20 @@
 import axios from 'axios';
-import { queryHelpers } from '@testing-library/react';
 
 export const FETCH_RESTAURANT_LIST_SUCCESS = 'FETCH_RESTAURANT_LIST_SUCCESS';
 export const FETCH_RESTAURANT_LIST_ERROR = 'FETCH_RESTAURANT_LIST_ERROR';
 export const FETCH_RESTAURANT_LIST_LOADING = 'FETCH_RESTAURANT_LIST_LOADING';
 
-const fetchRestaurantListSuccess = (data) => ({
+export const fetchRestaurantListSuccess = (data) => ({
   type: FETCH_RESTAURANT_LIST_SUCCESS,
   payload: data,
 });
 
-const fetchRestaurantListError = (error) => ({
+export const fetchRestaurantListError = (error) => ({
   type: FETCH_RESTAURANT_LIST_SUCCESS,
   payload: error,
 });
 
-const fetchRestaurantListLoading = () => ({
+export const fetchRestaurantListLoading = () => ({
   type: FETCH_RESTAURANT_LIST_LOADING,
 });
 
